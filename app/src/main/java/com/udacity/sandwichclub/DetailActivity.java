@@ -72,10 +72,12 @@ public class DetailActivity extends AppCompatActivity {
         descriptionTv.setText(sandwich.getDescription());
 
         TextView ingredientsTv = findViewById( R.id.ingredients_tv );
+       // String ingredients = sandwich.getIngredients().toString().replaceAll("\\[", "").replaceAll("\\]", "");    
         String ingredients = sandwich.getIngredients().toString();
         ingredientsTv.setText(ingredients.substring(1, ingredients.length() - 1));
 
         TextView alsoKnownTv = findViewById( R.id.also_known_tv );
+        //        String alsoKnownAs = sandwich.getAlsoKnownAs().toString().replaceAll("\\[", "").replaceAll("\\]", "");
         String alsoKnownAs = sandwich.getAlsoKnownAs().toString();
         alsoKnownTv.setText(alsoKnownAs.substring(1, alsoKnownAs.length() - 1));
 
