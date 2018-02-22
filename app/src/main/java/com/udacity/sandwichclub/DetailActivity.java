@@ -49,6 +49,10 @@ public class DetailActivity extends AppCompatActivity {
         setTitle(sandwich.getMainName());
 
         populateUI();
+        
+             Picasso.with(this)
+                .load(sandwich.getImage())
+                .into(ingredientsIv);
 
     }
 
@@ -60,10 +64,6 @@ public class DetailActivity extends AppCompatActivity {
     private void populateUI() {
 
         ImageView ingredientsIv = findViewById(R.id.image_iv);
-
-        Picasso.with(this)
-                .load(sandwich.getImage())
-                .into(ingredientsIv);
 
         TextView originTv = findViewById(R.id.origin_tv);
         originTv.setText(sandwich.getPlaceOfOrigin());
